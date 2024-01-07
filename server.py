@@ -18,7 +18,7 @@ while True:
   client_socket,addr = server_socket.accept()
   print('GOT CONNECTION FROM:',addr)
   if client_socket:
-    vid = cv2.VideoCapture(0)
+    vid = cv2.VideoCapture(config.CAMERA_INDEX)
 
     while(vid.isOpened()):
       img,frame = vid.read()
